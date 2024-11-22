@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+.apresentacao {
+    margin: 4%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.apresentacao__conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 45px;
+
+}
+
+.apresentacao__conteudo__cebecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.apresentacao__conteudo__cabecalho__titulo {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 65px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.apresentacao__conteudo__cabecalho__icon {}
+
+.apresentacao__conteudo__formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.apresentacao__conteudo__caixa__texto {
+    width: 90%;
+    height: 70px;
+    background-color: #F3F3F3;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 18px;
+    border: 1px solid #35374B;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apresentacao__conteudo__botao {
+    width: 10%;
+    height: 70px;
+    background-color: #222831;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    border: 1px solid #35374B;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apresentacao__conteudo__task {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+}
+
+li {
+    background-color: #F3F3F3;
+    border: 1px solid #35374B;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 70px;
+}
+
+
+li.task-text {
+    background-color: none;
+    margin-left: 10px;
+}
+
+
+a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.0rem;
+    color: #EA2C2C;
+    text-decoration: none;
+}
+
+span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+
+.completed a:hover {
+    color: #666;
+}
+
+
+.rodape {
+    text-align: end;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #1E1E1F;
+    padding: 25px;
+}
