@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+    <!--cabeçalho-->
+    <header></header>
+    <!--contéudo principal-->
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <div class="apresentacao__conteudo__cebecalho">
+                <h1 class="apresentacao__conteudo__cabecalho__titulo">To Do List</h1>
+            </div>
+            <!--formulário-->
+            <form class="apresentacao__conteudo__formulario" action="/add" method="POST">
+                <input class="apresentacao__conteudo__caixa__texto" type="text" name="task"
+                    placeholder="Insira sua atividade...." required>
+                <button class="apresentacao__conteudo__botao" type="submit">ADICIONAR</button>
+            </form>
+            <!--looping-->
+            <ul class="apresentacao__conteudo__task">
+                {% for task in tasks %}
+                <li class="{% if task.completed %}completed{% endif %}">
+                    <!-- Checkbox para marcar como concluído -->
+                    <a href="/complete/{{ task.id }}">
+                        <input type="checkbox" class="checkbox" {% if task.completed %}checked{% endif %}>
+                    </a>
+
+                    <!-- Texto da tarefa -->
+                    <span class="task-text">{{ task.content }}</span>
+
+                    <!-- Link para remover a tarefa -->
+                    <a href="/delete/{{ task.id }}">Remover</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+    <!--rodapé-->
+    <footer class="rodape">
+        <p>Criado por Beatriz Rabelo</p>
+    </footer>
+</body>
+
+</html>
